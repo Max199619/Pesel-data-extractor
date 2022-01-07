@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="460.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.peseldatacalculator.PeselExtractor">
+    <Label layoutX="98.0" layoutY="14.0" text="PESEL DATA EXTRACTOR:" textAlignment="CENTER">
+        <font>
+          <Font size="18.0" />
+        </font>
+        <textFill>
+          <RadialGradient centerX="0.5132158254211695" centerY="0.4280302813558867">
+              <stops>
+                  <Stop>
+                      <color>
+                          <Color red="0.4736842215061188" green="0.05087719112634659" blue="0.05087719112634659" />
+                      </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                      <color>
+                          <Color red="0.09473684430122375" green="0.09192982316017151" blue="0.09192982316017151" />
+                      </color>
+                  </Stop>
+              </stops>
+          </RadialGradient>
+        </textFill>
+    </Label>
+    <Separator layoutX="14.0" layoutY="48.0" prefWidth="370.0" />
+    <Label layoutX="177.0" layoutY="59.0" text="PESEL:">
+        <font>
+          <Font size="16.0" />
+        </font>
+    </Label>
+    <TextField fx:id="peselInput" layoutX="70.0" layoutY="95.0" prefHeight="26.0" prefWidth="257.0" promptText="Input PESEL here" />
+    <Button fx:id="data" layoutX="137.0" layoutY="131.0" mnemonicParsing="false" onAction="#CalculateData" prefHeight="26.0" prefWidth="126.0" text="Calculate data" />
+    <Separator layoutX="14.0" layoutY="173.0" prefWidth="370.0" />
+    <GridPane layoutX="65.0" layoutY="183.0" prefHeight="277.0" prefWidth="270.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="100.80001220703124" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="99.99998779296877" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="72.60001220703126" minHeight="10.0" prefHeight="46.799993896484374" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="132.5999969482422" minHeight="10.0" prefHeight="61.20000610351563" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="166.8000244140625" minHeight="10.0" prefHeight="61.000024414062494" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="183.60001220703123" minHeight="10.0" prefHeight="53.79997558593752" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="188.39996948242185" minHeight="10.0" prefHeight="64.79998779296875" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label text="Year of birth:" />
+        <Label text="Month of birth:" GridPane.rowIndex="1" />
+        <Label text="Day of birth:" GridPane.rowIndex="2" />
+        <Label text="Gender:" GridPane.rowIndex="3" />
+        <Label GridPane.rowIndex="4" />
+        <TextField fx:id="peselValid" editable="false" focusTraversable="false" GridPane.columnSpan="2" GridPane.rowIndex="4" alignment="CENTER"   />
+        <TextField fx:id="yearOfBirth" editable="false" focusTraversable="false" GridPane.columnIndex="1" />
+        <TextField fx:id="monthOfBirth" editable="false" focusTraversable="false" prefHeight="26.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="dayOfBirth" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="gender" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+</AnchorPane>

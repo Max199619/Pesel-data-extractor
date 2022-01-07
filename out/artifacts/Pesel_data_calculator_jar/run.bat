@@ -1,0 +1,1 @@
+-jar Pesel-data-calculator.jar
